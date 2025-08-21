@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enroll - Derech Olam Training Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Dynamic Header -->
+<div id="header-placeholder"></div>
+
+<!-- Dynamic Navigation Bar -->
+<div id="nav-placeholder"></div>
+
+<!-- Main Content -->
+<div class="container">
+  <p style="font-weight: bold; text-align: center;">
+    <span style="color: red; font-size: large;">SCROLL DOWN FOR MORE DETAILS</span>
+  </p>
+</div>
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://cdn-images.imagevenue.com/9f/b9/51/ME1AW9PG_o.png" target="_blank">
+    <img src="https://cdn-images.imagevenue.com/9f/b9/51/ME1AW9PG_o.png" 
+         alt="Enrolment Logo" width="200" height="192" border="0">
+  </a>
+</div>
+
+<h1 style="text-align: center; margin-top: 20px;">
+  🔥 Enrol in the <span style="background-color: #fcff01;">INTRODUCTION TO THE PALEO-MESSIANIC BELIEFS</span> Course 🔥
+</h1>
+
+<p style="color: #444; font-weight: bold; text-align: center; font-size: x-large; margin-top: 10px;">
+  PRICE TODAY: FREE!
+</p>
+
+<div style="text-align: center; margin-top: 30px;">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfvmFqjGcExjEF2E1KPV5HL8nZau4nVwu8c3juQdZKeE7qTEw/viewform?usp=pp_url" 
+     style="background-color: royalblue; border-radius: 5px; color: white; display: inline-block; font-size: 18px; padding: 12px 24px; text-decoration: none;" 
+     target="_blank">
+    REGISTER NOW
+  </a>
+</div>
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://groups.google.com/g/eternalpath6027/" 
+     style="background-color: green; border-radius: 5px; color: white; display: inline-block; font-size: 18px; padding: 12px 24px; text-decoration: none;" 
+     target="_blank">
+    ENROLL NOW
+  </a>
+</div>
+
+<p style="color: red; font-weight: bold; text-align: center; font-size: large; margin-top: 30px;">
+  <u>PLEASE NOTE:</u> Enrollment is NOT complete until you have completed the registration form (REGISTER NOW) AND joined our training Google Group (ENROLL NOW)!
+</p>
+
+<p style="color: red; font-weight: bold; text-align: center; font-size: large;">
+  IF YOU ONLY DO ONE, <u>YOU WILL NOT BE REGISTERED</u>!
+</p>
+
+<!-- Spacer -->
+<div style="height: 150px;"></div>
+
+<!-- Dynamic Footer -->
+<div id="footer-placeholder"></div>
+
+<!-- Scripts to dynamically pull header, nav, footer -->
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => { document.getElementById('header-placeholder').innerHTML = data; });
+
+  fetch('nav_bar.html')
+    .then(response => response.text())
+    .then(data => { document.getElementById('nav-placeholder').innerHTML = data; });
+
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => { document.getElementById('footer-placeholder').innerHTML = data; });
+</script>
+
+</body>
+</html>

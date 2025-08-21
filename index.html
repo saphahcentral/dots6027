@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Derech Olam Training Services - Start Your Walk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Dynamic Header -->
+<div id="header-placeholder"></div>
+
+<!-- Dynamic Navigation Bar -->
+<div id="nav-placeholder"></div>
+
+<!-- Main Content -->
+<!--Introduction-->
+<h3 style="color: red; text-align: center;">Start Your Walk on the Ancient Way</h3>
+<div style="text-align: center;">
+  <p style="color: #555555; font-size: 18px;">Discover the foundations of Paleo-Messianic belief through scripture, history, and spiritual clarity.</p>
+  <p style="color: #444444; font-size: medium;">Our structured course offers timeless guidance rooted in Torah, the Prophets, and the life and teachings of Yahusha.</p>
+  <p style="color: #444444; font-size: medium;"><br /></p>
+  <a href="enrol.html" style="background-color: royalblue; border-radius: 5px; color: white; font-size: 18px; padding: 12px 24px; text-decoration: none;">JOIN THE COURSE NOW!</a>
+  <br />
+</div>
+
+<!--Testimonials-->
+<div class="reviews" style="margin-top: 20px; text-align: center;">
+  <h2><b><u>What Students Are Saying</u></b></h2>
+  <div class="review"><p><strong>John Dean</strong>: "A compelling and insightful course. Highly recommended!"</p></div>
+  <div class="review"><p><strong>Magdalena Kaplan</strong>: "A must-join! The lessons are incredible and engaging."</p></div>
+  <div class="review"><p><strong>Michael Bessinger</strong>: "This course changed my perspective. Truly enlightening!"</p></div>
+</div>
+
+<!-- Dynamic Footer -->
+<div id="footer-placeholder"></div>
+
+<!-- Scripts to dynamically pull header, nav, footer -->
+<script>
+  // Fetch header.html
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => { document.getElementById('header-placeholder').innerHTML = data; });
+
+  // Fetch nav_bar.html
+  fetch('nav_bar.html')
+    .then(response => response.text())
+    .then(data => { document.getElementById('nav-placeholder').innerHTML = data; });
+
+  // Fetch footer.html
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => { document.getElementById('footer-placeholder').innerHTML = data; });
+</script>
+
+</body>
+</html>
