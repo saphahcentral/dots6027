@@ -1,21 +1,83 @@
-<div style="margin: auto; max-width: 800px;">
-  <div style="text-align: center;">
-    <div class="separator" style="clear: both; text-align: center;">
-      <a href="https://cdn-images.imagevenue.com/10/60/7f/ME1AW7FU_o.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
-        <img border="0" data-original-height="125" data-original-width="125" height="125" src="https://cdn-images.imagevenue.com/10/60/7f/ME1AW7FU_o.png" width="125" />
-      </a>
-    </div>
-    <br />
-    <h1><span style="font-family: Arial, sans-serif;">ABOUT US</span></h1>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - Derech Olam Training Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div style="font-family: Arial, sans-serif; margin-bottom: 20px; text-align: center;"></div>
-  <div style="font-family: Arial, sans-serif; text-align: center;">
-    <p style="color: #555555; font-size: 18px;"><strong>A Paleo-Messianic Center for Biblical Truth and Spiritual Growth.</strong></p>
-    <p style="color: #444444; font-size: 16px;"><em><strong>DERECH OLAM TRAINING SERVICES</strong></em> is a dedicated training institution committed to teaching the unaltered truth of the Scriptures from a Paleo-Messianic perspective. We uphold the Torah, the teachings of Yahusha HaMashiach, and the importance of returning to the Ancient Path of the faith.</p>
-    <p style="color: #444444; font-size: 16px;">Our courses are designed to equip students with a deep understanding of YHVH’s Word, preparing them to walk in obedience and share the message of salvation with the world. Our mission is to restore biblical truth, refute false doctrines, and guide seekers into a covenant relationship with YHVH.</p>
-    <p style="color: #444444; font-size: 16px;">Join us on this journey of faith and transformation. Enroll today and deepen your knowledge of the Scriptures as we prepare for the dark days ahead.</p>
-  </div>
-</div>
+  <!-- Universal Public CSS -->
+  <link rel="stylesheet" href="https://saphahcentral.github.io/saphahcentral/style-public.css">
 
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <style>
+    main {
+      max-width: 800px;
+      margin: 2em auto;
+      text-align: center;
+      padding: 0 1em;
+    }
+    main img {
+      width: 125px;
+      height: 125px;
+      margin-bottom: 1em;
+    }
+    main h1 {
+      margin: 0.5em 0 1em 0;
+      font-size: 2em;
+    }
+    main p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 1em 0;
+      color: #444;
+    }
+    main p.lead {
+      font-size: 18px;
+      color: #555;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header include -->
+  <div id="header"></div>
+  <!-- Navigation include -->
+  <div id="nav"></div>
+
+  <main>
+    <img src="https://cdn-images.imagevenue.com/10/60/7f/ME1AW7FU_o.png" 
+         alt="Derech Olam Training Services Logo">
+    <h1>ABOUT US</h1>
+
+    <p class="lead">A Paleo-Messianic Center for Biblical Truth and Spiritual Growth.</p>
+
+    <p><em><strong>DERECH OLAM TRAINING SERVICES</strong></em> is a dedicated training institution committed to teaching the unaltered truth of the Scriptures from a Paleo-Messianic perspective. We uphold the Torah, the teachings of Yahusha HaMashiach, and the importance of returning to the Ancient Path of the faith.</p>
+
+    <p>Our courses are designed to equip students with a deep understanding of YHVH’s Word, preparing them to walk in obedience and share the message of salvation with the world. Our mission is to restore biblical truth, refute false doctrines, and guide seekers into a covenant relationship with YHVH.</p>
+
+    <p>Join us on this journey of faith and transformation. Enroll today and deepen your knowledge of the Scriptures as we prepare for the dark days ahead.</p>
+  </main>
+
+  <!-- Footer include -->
+  <div id="footer"></div>
+
+  <!-- Local dynamic include loader -->
+  <script>
+    async function loadInclude(id, file) {
+      try {
+        const res = await fetch(file);
+        if (!res.ok) throw new Error(res.statusText);
+        const text = await res.text();
+        document.getElementById(id).innerHTML = text;
+      } catch (err) {
+        console.error("Include failed:", file, err);
+      }
+    }
+
+    loadInclude("header", "header.html");
+    loadInclude("nav", "nav.html");
+    loadInclude("footer", "footer.html");
+  </script>
+
+</body>
+</html>
